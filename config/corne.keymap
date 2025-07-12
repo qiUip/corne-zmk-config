@@ -23,10 +23,10 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// | TAB      |  Q  |  W  |  E  |  R  |    T    |   |    Y    |  U   |  I  |  O  |  P  | BKSP       |
+// | CTRL/ESC |  A  |  S  |  D  |  F  |    G    |   |    H    |  J   |  K  |  L  |  ;  | ENT        |
+// | SHFT     |  Z  |  X  |  C  |  V  |    B    |   |    N    |  M   |  ,  |  .  |  /  | SHFT/SRCH  |
+//                        | ALT | GUI | SPC Fn2 |   | SPC Fn1 | GUI  | ALT |
                         bindings = <
    &kp TAB       &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
    &mt LCTRL ESC &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K     &kp L   &kp SEMI &kp RET
@@ -36,10 +36,10 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | TAB      |  1  |  2  |  3  |  4  |  5   |   |  6  |  7  |  8  |  9  |  0  | DEL |
+// | CTRL/ESC |  [  |  ]  |  -  |  =  |      |   | LFT | DWN |  UP | RGT |  '  |  /  |
+// | SHFT     |  !  |  @  |  £  |  $  |  %   |   |  ^  |  &  |  *  |  (  |  )  |  ~  |
+//                        | Fn3 | GUI | BKSP |   |     | GUI | Fn3 |
                         bindings = <
    &kp TAB   &kp N1   &kp N2   &kp N3    &kp N4    &kp N5      &kp N6    &kp N7   &kp N8    &kp N9    &kp N0   &kp DEL
    &trans    &kp LBKT &kp RBKT &kp MINUS &kp EQUAL &trans      &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp SQT  &kp BACKSLASH
@@ -50,10 +50,10 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6   |  7  |  8  |  9  |  0   | BKSP |
+// | CTRL |  {  |  }  |  _  |  +  |     |   |  LFT | DWN | UP  | RGT |  \   |  `   |
+// | SHFT | F1  | F2  | F3  | F4  | F5  |   | F6   | F7  | F8  | F9  | F10  |  ~   |
+//                    | Fn3 | GUI |     |   | BKSP | GUI | Fn3 |
                         bindings = <
    &trans    &kp N1   &kp N2   &kp N3    &kp N4   &kp N5     &kp N6   &kp N7  &kp N8 &kp N9  &kp N0 &kp DEL
    &trans    &kp LBRC &kp RBRC &kp UNDER &kp PLUS &trans     &kp LEFT &kp DOWN &kp UP &kp RIGHT  &kp NUBS &kp GRAVE
