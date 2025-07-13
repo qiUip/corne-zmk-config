@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &led_strip {
-    chain-length = <27>;
+    chain-length = <6>;
 };
 
 &nice_view_spi {
@@ -37,12 +37,12 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // | TAB      |  1  |  2  |  3  |  4  |  5   |   |  6  |  7  |  8  |  9  |  0  | DEL |
-// | ESC CTRL |  [  |  ]  |  -  |  =  |      |   | LFT | DWN |  UP | RGT |  '  |  \  |
+// | ESC CTRL |  [  |  ]  |  -  |  =  | PSRN |   | LFT | DWN |  UP | RGT |  '  |  \  |
 // | SHFT     |  !  |  @  |  £  |  $  |  %   |   |  ^  |  &  |  *  |  (  |  )  |  ~  |
 //                        | Fn3 | GUI | BKSP |   |     | GUI | Fn3 |
                         bindings = <
    &trans &kp N1   &kp N2   &kp N3    &kp N4    &kp N5      &kp N6    &kp N7   &kp N8    &kp N9    &kp N0   &kp DEL
-   &trans &kp LBKT &kp RBKT &kp MINUS &kp EQUAL &trans      &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp SQT  &kp BACKSLASH
+   &trans &kp LBKT &kp RBKT &kp MINUS &kp EQUAL &kp PSCRN   &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp SQT  &kp BACKSLASH
    &trans &kp EXCL &kp AT   &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS &kp ASTRK &kp LPAR  &kp RPAR &kp TILDE
                             &mo 3      &trans   &kp BSPC    &trans    &trans   &mo 3
                         >;
