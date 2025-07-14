@@ -34,6 +34,18 @@
             tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&kp DQT>;
         };
+    td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp BACKSLASH>, <&kp PIPE>;
+        };
+    td3: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp GRAVE>, <&kp TILDE>;
+        };
     };
 
     keymap {
@@ -55,29 +67,29 @@
 
         lower_layer {
 // -----------------------------------------------------------------------------------------
-// | TAB      |  1  |  2  |  3  |  4  |  5   |   |  6  |  7  |  8  |  9  |  0  | DEL |
+// | `        |  1  |  2  |  3  |  4  |  5   |   |  6  |  7  |  8  |  9  |  0  | DEL |
 // | ESC CTRL |  [  |  ]  |  -  |  =  | PSRN |   | LFT | DWN |  UP | RGT |  '  |  \  |
-// | SHFT     |  !  |  @  |  £  |  $  |  %   |   |  ^  |  &  |  *  |  (  |  )  |  ~  |
+// | SHFT     |  !  |  @  |  £  |  $  |  %   |   |  ^  |  &  |  *  |  (  |  )  | END |
 //                        | Fn3 | GUI | BKSP |   |     | GUI | Fn3 |
                         bindings = <
-   &trans &kp N1   &kp N2   &kp N3    &kp N4    &kp N5      &kp N6    &kp N7   &kp N8    &kp N9    &kp N0   &kp DEL
-   &trans &kp LBKT &kp RBKT &kp MINUS &kp EQUAL &kp PSCRN   &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &td1     &kp BACKSLASH
-   &trans &kp EXCL &kp AT   &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS &kp ASTRK &kp LPAR  &kp RPAR &kp TILDE
-                            &mo 3      &trans   &kp BSPC    &trans    &trans   &mo 3
+   &kp GRAVE &kp N1   &kp N2   &kp N3    &kp N4    &kp N5      &kp N6    &kp N7   &kp N8    &kp N9    &kp N0   &kp DEL
+   &trans    &kp LBKT &kp RBKT &kp MINUS &kp EQUAL &kp PSCRN   &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &td1     &td2
+   &trans    &kp EXCL &kp AT   &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS &kp ASTRK &kp LPAR  &kp RPAR &kp END
+                               &mo 3      &trans   &kp BSPC    &trans    &trans   &mo 3
                         >;
         };
 
         raise_layer {
 // -----------------------------------------------------------------------------------------
-// | TAB      |  1  |  2  |  3  |  4  |  5  |   |  6   |  7  |  8  |  9  |  0   | DEL |
-// | ESC CTRL |  {  |  }  |  _  |  +  |     |   |  LFT | DWN | UP  | RGT |  \   |  `  |
-// | SHFT     | F1  | F2  | F3  | F4  | F5  |   | F6   | F7  | F8  | F9  | F10  |  ~  |
+// | ~        |  1  |  2  |  3  |  4  |  5  |   |  6   |  7  |  8  |  9  |  0   | DEL  |
+// | ESC CTRL |  {  |  }  |  _  |  +  |     |   |  LFT | DWN | UP  | RGT |  \   |  `   |
+// | SHFT     | F1  | F2  | F3  | F4  | F5  |   | F6   | F7  | F8  | F9  | F10  | HOME |
 //                        | Fn3 | GUI |     |   | BKSP | GUI | Fn3 |
             bindings = <
-   &trans &kp N1   &kp N2   &kp N3    &kp N4   &kp N5   &kp N6   &kp N7   &kp N8 &kp N9    &kp N0   &kp DEL
-   &trans &kp LBRC &kp RBRC &kp UNDER &kp PLUS &trans   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp NUBS &kp GRAVE
-   &trans &kp F1   &kp F2   &kp F3    &kp F4   &kp F5   &kp F6   &kp F7   &kp F8 &kp F9    &kp F10  &kp TILDE
-                            &mo 3     &trans   &trans   &kp BSPC &trans   &mo 3
+   &kp TILDE &kp N1   &kp N2   &kp N3    &kp N4   &kp N5   &kp N6   &kp N7   &kp N8 &kp N9    &kp N0   &kp DEL
+   &trans    &kp LBRC &kp RBRC &kp UNDER &kp PLUS &trans   &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp NUBS &td3
+   &trans    &kp F1   &kp F2   &kp F3    &kp F4   &kp F5   &kp F6   &kp F7   &kp F8 &kp F9    &kp F10  &kp HOME
+                               &mo 3     &trans   &trans   &kp BSPC &trans   &mo 3
                 >;
         };
 
